@@ -3,6 +3,14 @@ body {
     color: grey;
     font-size: 30pt;
 }
+
+#about {
+    display:inline-block;
+}
+#aboutpicture {
+    border: 1px;
+    border-color: white;
+}
 #navigationbar {
     background-color: lightgray;
 }
