@@ -8,99 +8,46 @@
     </head>
     <body>
         <div id="navigationbar">
-            <input type="button" onClick="document.getElementById('project').scrollIntoView();" value="Projects">
+            <input type="button" onClick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});" value="About Me">
+            <input type="button" onClick="document.getElementById('project').scrollIntoView({behavior: 'smooth'});" value="Projects">
+            <input type="button" onClick="document.getElementById('resume').scrollIntoView({behavior: 'smooth'});" value="Resume">
+            <input type="button" onClick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});" value="Contact">
         </div>
         <div id="about">
             <h3>About Me</h3>
-            <div id="aboutpicture">
-                <img src="Picture.jpg" alt="Picture of me" width="500" height="600">
-            </div>
-            <div id="abouttext">
-                Hi, I am Nicholas Tourony. I am junior computer science student at Quinnipiac University. I am currently looking for an internship for summer 2023.
+            <div id="aboutcontainer">
+                <div id="aboutpicture">
+                    <img src="Picture.jpg" alt="Picture of me" width="400" height="500">
+                </div>
+                <div id="abouttext">
+                    Hi, I am Nicholas Tourony. I am junior computer science student
+                    at Quinnipiac University. I am currently looking for an internship
+                    for summer 2023.
+                </div>
             </div>
         </div>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-
-        <div id="project">Projects</div>
+        <div id="project">
+            <h3>Projects</h3>
+            <h5>Volume Control Chrome Extension</h5>
+            <img src="Volume Control Screenshot.png" alt="GUI of volume control chrome extension">
+            <br>
+            This is a Chrome extension I made that allows you to change the volume of a Youtube video.
+            This extension is helpful because it goes up to 400% so you can make videos that are too quiet louder.
+            In this project I learned basic javascript, html, and css. I also learned how to use Chrome's API
+            and the various types of javascript files that chrome extensions can use.
+        </div>
+        <br>
+        <div id="resume"> 
+            <h3>Resume</h3>
+            <img src="Resume.png" alt="Image of my resume">
+        </div>
+        <br>
+        <div id="contact">
+            <h3>Contact</h3>
+            Email: ntourony@yahoo.com
+            <br>
+            LinkedIn: <a href="https://www.linkedin.com/in/nicholastourony/">linkedin.com/in/nicholastourony</a>
+        </div>
     </body>
 </Html>

@@ -4,13 +4,44 @@ body {
     font-size: 18pt;
 }
 
-#about {
-    display:inline-block;
+h3 {
+    text-align: center;
 }
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: lightgray;
+}
+
+#aboutcontainer {
+    display: flex;
+}
+
+#contactcontainer {
+
+}
+
 #aboutpicture {
-    border: 1px;
-    border-color: white;
+    flex: 50%;
 }
+
+#abouttext {
+    flex: 50%;
+}
+
+#resume {
+    text-align: center;
+}
+
 #navigationbar {
+    font-size: 16px;
     background-color: lightgray;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
 }
