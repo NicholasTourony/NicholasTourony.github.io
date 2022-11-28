@@ -2,6 +2,8 @@ body {
     background-color: black;
     color: grey;
     font-size: 18pt;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 h3 {
@@ -16,16 +18,22 @@ a:visited {
     color: lightgray;
 }
 
+.navbutton {
+    font-size: 20pt;
+    background: none;
+    border: none;
+}
+
+.navbutton:hover {
+    background: white;
+}
+
 #aboutcontainer {
     display: flex;
 }
 
-#contactcontainer {
-
-}
-
 #aboutpicture {
-    flex: 50%;
+    flex:auto;
 }
 
 #abouttext {

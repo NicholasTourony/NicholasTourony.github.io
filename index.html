@@ -5,14 +5,24 @@
         <title>
             Nicholas Tourony
         </title>
+        <script>
+            function scrollToElement(id)
+            {
+                yOffset = -40;
+                var y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset + yOffset;
+                console.log(y);
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        </script>
     </head>
     <body>
         <div id="navigationbar">
-            <input type="button" onClick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});" value="About Me">
-            <input type="button" onClick="document.getElementById('project').scrollIntoView({behavior: 'smooth'});" value="Projects">
-            <input type="button" onClick="document.getElementById('resume').scrollIntoView({behavior: 'smooth'});" value="Resume">
-            <input type="button" onClick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});" value="Contact">
+            <input type="button" class="navbutton" onClick="scrollToElement('about')" value="About Me">
+            <input type="button" class="navbutton" onClick="scrollToElement('project')" value="Projects">
+            <input type="button" class="navbutton" onClick="scrollToElement('resume')" value="Resume">
+            <input type="button" class="navbutton" onClick="scrollToElement('contact')" value="Contact">
         </div>
+        <br>
         <div id="about">
             <h3>About Me</h3>
             <div id="aboutcontainer">
@@ -30,7 +40,9 @@
         <div id="project">
             <h3>Projects</h3>
             <h5>Volume Control Chrome Extension</h5>
-            <img src="Volume Control Screenshot.png" alt="GUI of volume control chrome extension">
+            <div id="extensionPicture">
+                <img src="Volume Control Screenshot.png" alt="GUI of volume control chrome extension">
+            </div>
             <br>
             This is a Chrome extension I made that allows you to change the volume of a Youtube video.
             This extension is helpful because it goes up to 400% so you can make videos that are too quiet louder.
