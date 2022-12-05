@@ -53,6 +53,12 @@ a:visited {
     background: white;
 }
 
+@media (hover: none) {
+    .navbutton {
+        background: transparent;
+    }
+}
+
 #aboutcontainer {
     display: flex;
 }
