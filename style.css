@@ -47,7 +47,6 @@ a:visited {
     color: black;
     background: none;
     border: none;
-    -webkit-appearance: none;
 }
 
 .navbutton:hover {
