@@ -1,13 +1,32 @@
 body {
     background-color: black;
+    background-image: linear-gradient(to right, rgb(58, 83, 107), black, black, black, rgb(58, 83, 107));
     color: grey;
     font-size: 18pt;
     padding-left: 20%;
     padding-right: 20%;
 }
 
+video {
+    height: 60%;
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+
 h3 {
     text-align: center;
+    color:white;
+}
+
+h5 {
+    color:lightgray;
 }
 
 a:link {
@@ -36,20 +55,41 @@ a:visited {
     flex:auto;
 }
 
+#me {
+    border: 3px solid;
+    border-color: rgb(84, 122, 160);
+    border-radius: 100%;
+}
+
 #abouttext {
     flex: 50%;
+    padding-left: 5px;
+}
+
+#note {
+    font-size: 14px;
 }
 
 #resume {
     text-align: center;
 }
 
+#name {
+    left: 10px;
+    top: 3px;
+    position: fixed;
+    font-size: 24px;
+    color:rgb(84, 122, 160);
+}
+
 #navigationbar {
     font-size: 16px;
     background-color: lightgray;
+    background-image: linear-gradient(to right, white, black);
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
     text-align: center;
+    border-bottom: 5px solid rgb(84, 122, 160);
 }

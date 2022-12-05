@@ -17,6 +17,9 @@
     </head>
     <body>
         <div id="navigationbar">
+            <div id="name">
+                <b>Nicholas Tourony</b>
+            </div>
             <input type="button" class="navbutton" onClick="scrollToElement('about')" value="About Me">
             <input type="button" class="navbutton" onClick="scrollToElement('project')" value="Projects">
             <input type="button" class="navbutton" onClick="scrollToElement('resume')" value="Resume">
@@ -27,18 +30,37 @@
             <h3>About Me</h3>
             <div id="aboutcontainer">
                 <div id="aboutpicture">
-                    <img src="Picture.jpg" alt="Picture of me" width="400" height="500">
+                    <img src="Picture.jpg" id="me" alt="Picture of me" width="400" height="500">
                 </div>
                 <div id="abouttext">
-                    Hi, I am Nicholas Tourony. I am junior computer science student
-                    at Quinnipiac University. I am currently looking for an internship
-                    for summer 2023.
+                    Hi, I am Nicholas Tourony. I first got into programming by taking a introduction to programming course in my highschool.
+                    From there I took as many computer science related courses I could throughout highschool and decided to major in
+                    computer science in college. I am now currently a junior at Quinnipiac University and my love for 
+                    computer science, programming, and technology has only grown. My next step in my computer science journey involves
+                    me looking for an internship for summer 2023.
                 </div>
             </div>
         </div>
         <br>
         <div id="project">
             <h3>Projects</h3>
+            <h5>Shopping List iPhone App</h5>
+            <video src="Shopping App Video 2.mp4" onmouseover="this.setAttribute('controls', 'controls');" onmouseout="this.removeAttribute('controls')" muted></video>
+            <br>
+            <br>
+            <div id="note">
+                Note: I can no longer get this app on my phone due me not having access to a Mac with the lastest xCode
+                version. So the video on the left is using an old video I had of an old GUI. The image on the right shows
+                an example of the updated GUI.
+            </div>
+            <br>
+            <br>
+            This is a shopping list app I created for my iOS programming course. 
+            It has basic functionality such and creating and deleting lists along with
+            adding and removing items from lists. I also added some more unique features like
+            being able to find stores on a map, scheduling to your calendar, and searching online retailers.
+            Through this project I learned a lot about the Swift programming language, core data, using a storyboard,
+            and developing with xCode.
             <h5>Volume Control Chrome Extension</h5>
             <div id="extensionPicture">
                 <img src="Volume Control Screenshot.png" alt="GUI of volume control chrome extension">
@@ -46,8 +68,15 @@
             <br>
             This is a Chrome extension I made that allows you to change the volume of a Youtube video.
             This extension is helpful because it goes up to 400% so you can make videos that are too quiet louder.
-            In this project I learned basic javascript, html, and css. I also learned how to use Chrome's API
+            In this project, I learned basic JavaScript, HTML, and CSS. I also learned how to use Chrome's API
             and the various types of javascript files that chrome extensions can use.
+
+            <h5>Dodge Enemy Game</h5>
+            <video src="SER120 Game.mp4" onmouseover="this.setAttribute('controls', 'controls');" onmouseout="this.removeAttribute('controls')" muted></video>
+            <br>
+            <br>
+            This was a final project for my object oriented programming class I took freshman year. This was created in Java and
+            I used a lot of swing to create the layout and buttons.
         </div>
         <br>
         <div id="resume"> 
