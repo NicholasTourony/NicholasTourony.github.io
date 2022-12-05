@@ -8,11 +8,12 @@
         <script>
             function scrollToElement(id)
             {
-                yOffset = -40;
+                var yOffset = -40;
                 var y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset + yOffset;
                 console.log(y);
                 window.scrollTo({top: y, behavior: 'smooth'});
             }
+
         </script>
     </head>
     <body>
@@ -50,8 +51,7 @@
             <br>
             <div id="note">
                 Note: I can no longer get this app on my phone due me not having access to a Mac with the lastest xCode
-                version. So the video on the left is using an old video I had of an old GUI. The image on the right shows
-                an example of the updated GUI.
+                version. So the video is using an old video I had of an old GUI. 
             </div>
             <br>
             <br>
