@@ -85,7 +85,8 @@ a:visited {
 #navigationbar {
     font-size: 16px;
     background-color: lightgray;
-    background-image: linear-gradient(to right, white, black);
+    /* background-image: linear-gradient(to right, white, black); */
+    background-image: -webkit-linear-gradient(left, white, black);
     position: fixed;
     top: 0px;
     left: 0px;
