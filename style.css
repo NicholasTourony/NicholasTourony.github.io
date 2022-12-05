@@ -19,6 +19,11 @@ img {
     margin: auto;
 }
 
+#resumepicture {
+    height: 60%;
+    width: 60%;
+}
+
 
 h3 {
     text-align: center;
@@ -73,8 +78,6 @@ a:visited {
 
 #resume {
     text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 #name {
