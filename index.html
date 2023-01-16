@@ -5,26 +5,16 @@
         <title>
             Nicholas Tourony
         </title>
-        <script>
-            function scrollToElement(id)
-            {
-                var yOffset = -55;
-                var y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset + yOffset;
-                console.log(y);
-                window.scrollTo({top: y, behavior: 'smooth'});
-            }
-
-        </script>
     </head>
     <body>
         <div id="navigationbar">
             <div id="name">
                 <b>Nicholas Tourony</b>
             </div>
-            <input type="button" class="navbutton" onClick="scrollToElement('about')" value="About Me">
-            <input type="button" class="navbutton" onClick="scrollToElement('project')" value="Projects">
-            <input type="button" class="navbutton" onClick="scrollToElement('resume')" value="Resume">
-            <input type="button" class="navbutton" onClick="scrollToElement('contact')" value="Contact">
+            <input type="button" id="aboutButton" class="navbutton" onClick="scrollToElement('about')" value="About Me">
+            <input type="button" id="projectsButton" class="navbutton" onClick="scrollToElement('project')" value="Projects">
+            <input type="button" id="resumeButton" class="navbutton" onClick="scrollToElement('resume')" value="Resume">
+            <input type="button" id="contactButton" class="navbutton" onClick="scrollToElement('contact')" value="Contact">
         </div>
         <br>
         <div id="about">
@@ -46,7 +36,12 @@
         <div id="project">
             <h3>Projects</h3>
             <h5>Shopping List iPhone App</h5>
-            <video src="Shopping App Video 2.mp4#t=0.5" preload="metadata" onmouseover="this.setAttribute('controls', 'controls');" onmouseout="this.removeAttribute('controls')" muted></video>
+            This is a shopping list app I created for my iOS programming course. 
+            It has basic functionality such and creating and deleting lists along with
+            adding and removing items from lists. I also added some more unique features like
+            being able to find stores on a map, scheduling to your calendar, and searching online retailers.
+            Through this project I learned a lot about the Swift programming language, core data, using a storyboard,
+            and developing with xCode.
             <br>
             <br>
             <div id="note">
@@ -54,29 +49,42 @@
                 version. So the video is using an old video I had of an old GUI. 
             </div>
             <br>
+            <video src="Shopping App Video 2.mp4#t=0.5" preload="metadata" onmouseover="this.setAttribute('controls', 'controls');" onmouseout="this.removeAttribute('controls')" muted></video>
             <br>
-            This is a shopping list app I created for my iOS programming course. 
-            It has basic functionality such and creating and deleting lists along with
-            adding and removing items from lists. I also added some more unique features like
-            being able to find stores on a map, scheduling to your calendar, and searching online retailers.
-            Through this project I learned a lot about the Swift programming language, core data, using a storyboard,
-            and developing with xCode.
-            <h5>Volume Control Chrome Extension</h5>
-            <div id="extensionPicture">
-                <img src="Volume Control Screenshot.png" alt="GUI of volume control chrome extension">
+            <br>
+            <h5>Database Visualization Project</h5>
+            This was a partner project for my databases class. In this project, we had to take a dataset and 
+            created a database out of it and then create visualizations off that database. We used all the
+            Netflix movies and shows as our dataset. We designed our schemas through normalization and ER and RM diagrams.
+            Once we designed our database, we wrote a python script to read the CSV file and insert the data
+            into a Google Cloud MySQL database. We then used matplotlib to create visualizations on our data. A couple examples are shown below.
+            <br>
+            <br>
+            <div id="databasePictures">
+                <img src="Database Project 1.png" id="databasePicture1" alt="First chart example">
+                <br>
+                <img src="Database Project 2.png" id="databasePicture2" alt="Second chart example">
             </div>
             <br>
+            <h5>Volume Control Chrome Extension</h5>
             This is a Chrome extension I made that allows you to change the volume of a Youtube video.
             This extension is helpful because it goes up to 400% so you can make videos that are too quiet louder.
             In this project, I learned basic JavaScript, HTML, and CSS. I also learned how to use Chrome's API
             and the various types of javascript files that chrome extensions can use.
+            <br>
+            <br>
+            <div id="extensionPicture">
+                <img src="Volume Control Screenshot.png" alt="GUI of volume control chrome extension">
+            </div>
+            <br>
 
             <h5>Dodge Enemy Game</h5>
-            <video src="SER120 Game.mp4#t=0.5" preload="metadata" onmouseover="this.setAttribute('controls', 'controls');" onmouseout="this.removeAttribute('controls')" muted></video>
-            <br>
-            <br>
             This was a final project for my object oriented programming class I took freshman year. This was created in Java and
             I used a lot of swing to create the layout and buttons.
+            <br>
+            <br>
+            <video src="SER120 Game.mp4#t=0.5" preload="metadata" onmouseover="this.setAttribute('controls', 'controls');" onmouseout="this.removeAttribute('controls')" muted></video>
+            <br>
         </div>
         <br>
         <div id="resume"> 
@@ -89,6 +97,59 @@
             Email: ntourony@yahoo.com
             <br>
             LinkedIn: <a href="https://www.linkedin.com/in/nicholastourony/">linkedin.com/in/nicholastourony</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
     </body>
+    <script>
+            highlightNavButton();
+            // whenever a nav button is press the website scrolls to that section
+            function scrollToElement(id)
+            {
+                var yOffset = -55;
+                var y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset + yOffset;
+                console.log(y);
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+
+            // underline the button for the current section the website is scrolled to
+            window.onscroll = function() {highlightNavButton()};
+            function highlightNavButton() {
+                var top = window.scrollY;
+                
+                // TODO: come back to this if statement there is definitely a better way to handle the underlining
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight)
+                {
+                    document.getElementById('contactButton').style.textDecoration = "underline";
+                    document.getElementById('resumeButton').style.textDecoration = "none";
+                    document.getElementById('projectsButton').style.textDecoration = "none";
+                    document.getElementById('aboutButton').style.textDecoration = "none";
+                }
+                else if (top > document.getElementById('resume').getBoundingClientRect().top + window.pageYOffset - 60)
+                {
+                    document.getElementById('resumeButton').style.textDecoration = "underline";
+                    document.getElementById('contactButton').style.textDecoration = "none";
+                    document.getElementById('projectsButton').style.textDecoration = "none";
+                    document.getElementById('aboutButton').style.textDecoration = "none";
+                }
+                else if (top > document.getElementById('project').getBoundingClientRect().top + window.pageYOffset - 60)
+                {
+                    document.getElementById('projectsButton').style.textDecoration = "underline";
+                    document.getElementById('aboutButton').style.textDecoration = "none";
+                    document.getElementById('contactButton').style.textDecoration = "none";
+                    document.getElementById('resumeButton').style.textDecoration = "none";
+                }
+                else if (top > document.getElementById('about').getBoundingClientRect().top + window.pageYOffset - 80)
+                {
+                    document.getElementById('aboutButton').style.textDecoration = "underline";
+                    document.getElementById('projectsButton').style.textDecoration = "none";
+                    document.getElementById('contactButton').style.textDecoration = "none";
+                    document.getElementById('resumeButton').style.textDecoration = "none";                
+                }
+
+            }
+        </script>
 </Html>

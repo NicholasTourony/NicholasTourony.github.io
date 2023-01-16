@@ -12,11 +12,25 @@ video {
     width: 60%;
     display: block;
     margin: auto;
+    border: 3px solid;
+    border-color: rgb(84, 122, 160);
 }
 
 img {
     display: block;
     margin: auto;
+    border: 3px solid;
+    border-color: rgb(84, 122, 160);
+}
+
+#databasePicture1 {
+    height: 600px;
+    width: 800px;
+}
+
+#databasePicture2 {
+    height: 600px;
+    width: 800px;
 }
 
 #resumepicture {
@@ -43,7 +57,7 @@ a:visited {
 }
 
 .navbutton {
-    font-size: 20pt;
+    font-size: 40px;
     color: black;
     background: none;
     border: none;
@@ -91,17 +105,15 @@ a:visited {
 
 #name {
     left: 10px;
-    top: 3px;
+    top: 0px;
     position: fixed;
-    font-size: 24px;
+    font-size: 40px;
     color:rgb(84, 122, 160);
 }
 
 #navigationbar {
     font-size: 16px;
     background-color: lightgray;
-    /* background-image: linear-gradient(to right, white, black); */
-    background-image: -webkit-linear-gradient(left, white, black);
     position: fixed;
     top: 0px;
     left: 0px;
