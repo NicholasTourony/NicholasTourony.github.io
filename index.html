@@ -7,10 +7,10 @@
         </title>
     </head>
     <body>
+        <br>
+        <br>
+        <div id="Name"><b>Nicholas Tourony</b></div>
         <div id="navigationbar">
-            <div id="name">
-                <b>Nicholas Tourony</b>
-            </div>
             <input type="button" id="aboutButton" class="navbutton" onClick="scrollToElement('about')" value="About Me">
             <input type="button" id="projectsButton" class="navbutton" onClick="scrollToElement('project')" value="Projects">
             <input type="button" id="resumeButton" class="navbutton" onClick="scrollToElement('resume')" value="Resume">
@@ -89,7 +89,7 @@
         <br>
         <div id="resume"> 
             <h3>Resume</h3>
-            <img src="Resume 2.png" id="resumepicture" alt="Image of my resume">
+            <img src="Resume 3.png" id="resumepicture" alt="Image of my resume">
         </div>
         <br>
         <div id="contact">
@@ -142,7 +142,7 @@
                     document.getElementById('contactButton').style.textDecoration = "none";
                     document.getElementById('resumeButton').style.textDecoration = "none";
                 }
-                else if (top > document.getElementById('about').getBoundingClientRect().top + window.pageYOffset - 80)
+                else if (top > document.getElementById('about').getBoundingClientRect().top + window.pageYOffset - 100)
                 {
                     document.getElementById('aboutButton').style.textDecoration = "underline";
                     document.getElementById('projectsButton').style.textDecoration = "none";
